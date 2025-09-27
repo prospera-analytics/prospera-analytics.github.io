@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rodrigo Silva do Carmo | Data Analyst Portfolio</title>
+  <title>Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
@@ -21,7 +21,7 @@
     header {
       background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
       color: white;
-      padding: 80px 0 60px; /* altura reduzida */
+      padding: 80px 0 60px; /* 🔹 altura reduzida */
       text-align: center;
       clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     }
@@ -36,10 +36,19 @@
       margin-top: 10px;
     }
 
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
+    .lang-buttons {
+      margin-top: 20px;
+    }
+
+    .lang-buttons button {
+      background: white;
+      color: var(--primary-color);
+      border: none;
+      padding: 8px 15px;
+      margin: 0 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
     }
 
     .skills-projects {
@@ -53,11 +62,11 @@
       border-radius: 10px;
       padding: 30px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      min-height: 700px; /* balancear altura */
+      min-height: 700px; /* 🔹 balancear altura */
     }
 
     .skill-category {
-      margin-bottom: 40px; /* maior espaçamento */
+      margin-bottom: 40px; /* 🔹 mais espaço entre blocos */
     }
 
     .skill-category h3 {
@@ -86,107 +95,124 @@
       color: var(--secondary-color);
     }
 
-    .projects-column .project {
-      margin-bottom: 30px;
-    }
-
-    .projects-column h3 {
-      color: var(--primary-color);
-    }
-
-    footer {
-      background: #222;
-      color: #ccc;
-      text-align: center;
-      padding: 20px;
-    }
-
-    footer a {
-      color: var(--primary-color);
-      margin: 0 10px;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
+    .skill-desc {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #555;
     }
   </style>
 </head>
 <body>
   <!-- Header -->
   <header>
-    <h1>Rodrigo Silva do Carmo</h1>
-    <p>Data Analyst | Turning Data into Insights</p>
+    <h1 class="lang-en">John Doe</h1>
+    <h1 class="lang-pt" style="display:none;">João da Silva</h1>
+
+    <p class="lang-en">Data Scientist & Analyst</p>
+    <p class="lang-pt" style="display:none;">Cientista de Dados & Analista</p>
+
+    <!-- 🔹 botões multilíngues -->
+    <div class="lang-buttons">
+      <button id="btn-en">English</button>
+      <button id="btn-pt">Portuguese</button>
+    </div>
   </header>
 
   <!-- Skills + Projects -->
   <section class="skills-projects">
     <!-- Skills -->
     <div class="skills-column">
-      <h2>Technical Skills</h2>
+      <h2 class="lang-en">Technical Skills</h2>
+      <h2 class="lang-pt" style="display:none;">Competências Técnicas</h2>
 
       <div class="skill-category">
-        <h3>Programming & Data</h3>
+        <h3 class="lang-en">Programming & Data</h3>
+        <h3 class="lang-pt" style="display:none;">Programação & Dados</h3>
         <div class="skill-items">
-          <div class="skill-item"><i class="fab fa-python"></i> Python – automation & ML models</div>
-          <div class="skill-item"><i class="fas fa-database"></i> SQL – queries & dashboards</div>
-          <div class="skill-item"><i class="fab fa-r-project"></i> R – statistical modeling</div>
-          <div class="skill-item">Pandas/Numpy – data wrangling</div>
-          <div class="skill-item">Scikit-learn – predictive models</div>
-          <div class="skill-item">TensorFlow – deep learning</div>
+          <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+          <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
+          <div class="skill-item"><i class="fab fa-r-project"></i> R</div>
+          <div class="skill-item">Pandas/Numpy</div>
+          <div class="skill-item">Scikit-learn</div>
+          <div class="skill-item">TensorFlow</div>
         </div>
+        <p class="skill-desc lang-en">Building ETL pipelines, predictive models, and automating data workflows.</p>
+        <p class="skill-desc lang-pt" style="display:none;">Construção de pipelines ETL, modelos preditivos e automação de fluxos de dados.</p>
       </div>
 
       <div class="skill-category">
-        <h3>Data Visualization</h3>
+        <h3 class="lang-en">Data Visualization</h3>
+        <h3 class="lang-pt" style="display:none;">Visualização de Dados</h3>
         <div class="skill-items">
-          <div class="skill-item"><i class="fas fa-chart-bar"></i> Power BI – interactive dashboards</div>
-          <div class="skill-item"><i class="fas fa-chart-pie"></i> Excel – reporting & KPIs</div>
-          <div class="skill-item"><i class="fas fa-chart-line"></i> Google Sheets – automation & insights</div>
-          <div class="skill-item"><i class="fas fa-chart-area"></i> Matplotlib/Seaborn – exploratory analysis</div>
+          <div class="skill-item"><i class="fas fa-chart-bar"></i> Power BI</div>
+          <div class="skill-item"><i class="fas fa-chart-pie"></i> Excel</div>
+          <div class="skill-item"><i class="fas fa-chart-line"></i> Google Sheets</div>
+          <div class="skill-item"><i class="fas fa-chart-area"></i> Matplotlib/Seaborn</div>
         </div>
+        <p class="skill-desc lang-en">Creating dashboards, reports, and visual insights for decision-making.</p>
+        <p class="skill-desc lang-pt" style="display:none;">Criação de dashboards, relatórios e insights visuais para tomada de decisão.</p>
       </div>
 
       <div class="skill-category">
-        <h3>Tools & Platforms</h3>
+        <h3 class="lang-en">Tools & Platforms</h3>
+        <h3 class="lang-pt" style="display:none;">Ferramentas & Plataformas</h3>
         <div class="skill-items">
-          <div class="skill-item"><i class="fas fa-code"></i> VS Code – coding environment</div>
-          <div class="skill-item"><i class="fas fa-laptop-code"></i> Google Colab – fast prototyping</div>
-          <div class="skill-item"><i class="fab fa-github"></i> GitHub – version control</div>
+          <div class="skill-item"><i class="fas fa-code"></i> VS Code</div>
+          <div class="skill-item"><i class="fas fa-laptop-code"></i> Google Colab</div>
+          <div class="skill-item"><i class="fab fa-github"></i> GitHub</div>
         </div>
+        <p class="skill-desc lang-en">Version control, cloud notebooks, and collaborative development.</p>
+        <p class="skill-desc lang-pt" style="display:none;">Controle de versão, notebooks em nuvem e desenvolvimento colaborativo.</p>
       </div>
     </div>
 
     <!-- Projects -->
     <div class="projects-column">
-      <h2>Projects</h2>
+      <h2 class="lang-en">Projects</h2>
+      <h2 class="lang-pt" style="display:none;">Projetos</h2>
 
       <div class="project">
-        <h3>Instagram Analytics Tracker</h3>
-        <p>Built a system to collect Instagram post metrics and analyze hashtag performance, clustering posts by audience engagement.</p>
-        <a href="https://github.com/seuusuario/instagram-tracker" target="_blank">View on GitHub</a>
+        <h3 class="lang-en">Instagram Analytics Tracker</h3>
+        <h3 class="lang-pt" style="display:none;">Rastreador de Analytics do Instagram</h3>
+        <p class="lang-en">Built a system to collect Instagram post metrics and analyze hashtag performance.</p>
+        <p class="lang-pt" style="display:none;">Construí um sistema para coletar métricas de postagens do Instagram e analisar a performance de hashtags.</p>
+        <img src="project1.png" alt="Project 1 Screenshot">
       </div>
 
       <div class="project">
-        <h3>Predictive Lead Scoring Model</h3>
-        <p>Developed a machine learning model to predict lead conversion based on social media engagement data, increasing sales efficiency.</p>
-        <a href="https://github.com/seuusuario/lead-scoring" target="_blank">View on GitHub</a>
-      </div>
-
-      <div class="project">
-        <h3>Financial Market Analysis</h3>
-        <p>Analyzed gold and technology ETFs performance using Python, SQL and visualization tools to identify investment opportunities.</p>
-        <a href="https://github.com/seuusuario/finance-analysis" target="_blank">View on GitHub</a>
+        <h3 class="lang-en">Predictive Lead Scoring Model</h3>
+        <h3 class="lang-pt" style="display:none;">Modelo Preditivo de Lead Scoring</h3>
+        <p class="lang-en">Machine learning model to predict lead conversion based on social media engagement.</p>
+        <p class="lang-pt" style="display:none;">Modelo de machine learning para prever conversão de leads baseado em engajamento de redes sociais.</p>
+        <img src="project2.png" alt="Project 2 Screenshot">
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>Connect with me:</p>
-    <a href="https://github.com/seuusuario" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-    <a href="https://linkedin.com/in/seuusuario" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    <a href="mailto:seuemail@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-  </footer>
+  <!-- Script para troca de idioma -->
+  <script>
+    let currentLang = 'en';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
+      document.querySelectorAll('.lang-pt').forEach(el => el.style.display = lang === 'pt' ? '' : 'none');
+
+      // mudar textos dos botões
+      if (lang === 'en') {
+        document.getElementById('btn-en').textContent = "English";
+        document.getElementById('btn-pt').textContent = "Portuguese";
+      } else {
+        document.getElementById('btn-en').textContent = "Inglês";
+        document.getElementById('btn-pt').textContent = "Português";
+      }
+    }
+
+    // inicializa em inglês
+    setLanguage('en');
+
+    document.getElementById('btn-en').addEventListener('click', () => setLanguage('en'));
+    document.getElementById('btn-pt').addEventListener('click', () => setLanguage('pt'));
+  </script>
 </body>
 </html>
