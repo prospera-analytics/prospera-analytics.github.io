@@ -131,6 +131,30 @@
             line-height: 1.7;
         }
         
+        /* Logo and Header */
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 50px;
+            width: auto;
+            max-width: 200px;
+            transition: opacity 0.3s ease;
+        }
+        
+        .logo:hover {
+            opacity: 0.9;
+        }
+        
         /* Language Toggle */
         .language-toggle {
             position: fixed;
@@ -165,8 +189,7 @@
         header {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
-            padding: 40px 0 80px;
-            text-align: center;
+            padding: 20px 0 80px;
             position: relative;
             overflow: hidden;
         }
@@ -177,7 +200,7 @@
             list-style: none;
             gap: 30px;
             padding: 0;
-            margin-bottom: 60px;
+            margin: 20px 0 60px 0;
         }
         
         .nav-links li {
@@ -199,6 +222,7 @@
         .hero-content {
             max-width: 900px;
             margin: 0 auto;
+            text-align: center;
         }
         
         .hero-content h1 {
@@ -628,6 +652,12 @@
         }
         
         @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
             .hero-content h1 {
                 font-size: 2.5rem;
             }
@@ -697,6 +727,10 @@
             .contact-form {
                 padding: 25px;
             }
+            
+            .logo {
+                height: 40px;
+            }
         }
 
         /* Footer .footer-content forced column for desktop too (preserved per your request) */
@@ -715,45 +749,53 @@
         <button class="language-btn" id="pt-btn">Português</button>
     </div>
 
-<!-- Header & Hero Section -->
-<header>
-    <div class="container">
-        <ul class="nav-links">
-            <li><a href="https://prospera-analytics.github.io/" class="lang-en">Get to Know Solutions For Your Business</a><a href="https://prospera-analytics.github.io/" class="lang-pt" style="display: none;">Conheça Soluções Para o Seu Negócio</a></li>
-            <li><a href="https://prospera-analytics.github.io/#contact" class="lang-en">Contact</a><a href="https://prospera-analytics.github.io/#contact" class="lang-pt" style="display: none;">Contato</a></li>
-        </ul>
-        
-        <div class="hero-content">
-            <h1 class="lang-en">Stop Guessing. Start <span style="color: #e74c3c;">Growing.</span></h1>
-            <h1 class="lang-pt" style="display: none;">Pare de Adivinhar. Comece a <span style="color: #e74c3c;">Crescer.</span></h1>
+    <!-- Header & Hero Section -->
+    <header>
+        <div class="container">
+            <!-- Logo e navegação -->
+            <div class="header-container">
+                <div class="logo-container">
+                    <a href="#">
+                        <img src="../assets/images/prospera-main-logo.png" alt="Prospera Analytics Logo" class="logo">
+                    </a>
+                </div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="https://prospera-analytics.github.io/" class="lang-en">Get to Know Solutions For Your Business</a><a href="https://prospera-analytics.github.io/" class="lang-pt" style="display: none;">Conheça Soluções Para o Seu Negócio</a></li>
+                <li><a href="https://prospera-analytics.github.io/#contact" class="lang-en">Contact</a><a href="https://prospera-analytics.github.io/#contact" class="lang-pt" style="display: none;">Contato</a></li>
+            </ul>
             
-            <p class="lang-en">Data-driven solutions that cut costs, accelerate growth, and prevent revenue loss. Transform your business with actionable insights, not just pretty charts.</p>
-            <p class="lang-pt" style="display: none;">Soluções baseadas em dados que reduzem custos, aceleram o crescimento e previnem perdas de receita. Transforme seu negócio com insights acionáveis, não apenas gráficos bonitos.</p>
-            
-<div class="hero-cta">
+            <div class="hero-content">
+                <h1 class="lang-en">Stop Guessing. Start <span style="color: #e74c3c;">Growing.</span></h1>
+                <h1 class="lang-pt" style="display: none;">Pare de Adivinhar. Comece a <span style="color: #e74c3c;">Crescer.</span></h1>
+                
+                <p class="lang-en">Data-driven solutions that cut costs, accelerate growth, and prevent revenue loss. Transform your business with actionable insights, not just pretty charts.</p>
+                <p class="lang-pt" style="display: none;">Soluções baseadas em dados que reduzem custos, aceleram o crescimento e previnem perdas de receita. Transforme seu negócio com insights acionáveis, não apenas gráficos bonitos.</p>
+                
+                <div class="hero-cta">
+                    <!-- OPEN CALENDLY IN NEW TAB -->
+                    <a href="https://calendly.com/rod19-silva/30min"
+                       target="_blank"
+                       class="btn btn-accent lang-en">
+                        Get Free Consultation
+                    </a>
 
-    <!-- OPEN CALENDLY IN NEW TAB -->
-    <a href="https://calendly.com/rod19-silva/30min"
-       target="_blank"
-       class="btn btn-accent lang-en">
-        Get Free Consultation
-    </a>
+                    <a href="https://calendly.com/rod19-silva/30min"
+                       target="_blank"
+                       class="btn btn-accent lang-pt"
+                       style="display: none;">
+                        Obter Consulta Gratuita
+                    </a>
 
-    <a href="https://calendly.com/rod19-silva/30min"
-       target="_blank"
-       class="btn btn-accent lang-pt"
-       style="display: none;">
-        Obter Consulta Gratuita
-    </a>
-
-    <a href="https://prospera-analytics.github.io/" class="btn-outline lang-en">Click and have detailed information</a>
-    <a href="https://prospera-analytics.github.io/" class="btn-outline lang-pt" style="display: none;">Clique e tenha informações detalhadas</a>
-
-</div>
+                    <a href="https://prospera-analytics.github.io/" class="btn-outline lang-en">Click and have detailed information</a>
+                    <a href="https://prospera-analytics.github.io/" class="btn-outline lang-pt" style="display: none;">Clique e tenha informações detalhadas</a>
+                </div>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
+    <!-- O RESTANTE DO SEU CÓDIGO PERMANECE IGUAL A PARTIR DAQUI -->
     <!-- Stats Section -->
     <section class="stats-section">
         <div class="container">
@@ -782,6 +824,7 @@
         </div>
     </section>
 
+    <!-- O RESTANTE DO SEU CÓDIGO CONTINUA EXATAMENTE COMO ESTAVA... -->
     <!-- Services Section -->
     <section id="services" class="services-section">
         <div class="container">
@@ -920,293 +963,203 @@
         </div>
     </section>
 
+    <!-- How It Works Section -->
+    <section id="process" class="process-section">
+        <div class="container">
+            <h2 class="section-title lang-en">Types of Services</h2>
+            <h2 class="section-title lang-pt" style="display: none;">Tipos de Serviços</h2>
 
-<!-- How It Works Section -->
-<section id="process" class="process-section">
-    <div class="container">
-        <h2 class="section-title lang-en">Types of Services</h2>
-        <h2 class="section-title lang-pt" style="display: none;">Tipos de Serviços</h2>
+            <p class="section-subtitle lang-en">Several types of service packages to meet your priorities and budget.</p>
+            <p class="section-subtitle lang-pt" style="display: none;">Vários tipos de pacotes para atender às suas prioridades e seu bolso.</p>
 
-        <p class="section-subtitle lang-en">Several types of service packages to meet your priorities and budget.</p>
-        <p class="section-subtitle lang-pt" style="display: none;">Vários tipos de pacotes para atender às suas prioridades e seu bolso.</p>
-
-        <div class="process-steps">
-
-            <!-- PACKAGE 1 ----------------------------------------- -->
-            <div class="process-step">
-                <div class="step-number">1</div>
-
-                <h4 class="lang-en">Consultancy services - One-time only</h4>
-                <h4 class="lang-pt" style="display:none;">Serviço de consultoria - Oferta única</h4>
-
-                <h3 class="price lang-en">$1500</h3>
-                <h3 class="price lang-pt" style="display:none;">R$800</h3>
-
-                <p class="lang-en">
-                    Includes: content gap, competitor, sales or any other requested analysis with specific data and goals.
-                    30 days data analysis service with insights and recommendations. 2-hour Zoom session.
-                </p>
-                <p class="lang-pt" style="display:none;">
-                    Inclui: análise de conteúdo, competidores, vendas ou outra solicitada;
-                    30 dias de serviço de análise de dados; sessão Zoom de 2 horas.
-                </p>
-
-                <!-- PAYMENT BUTTONS -->
-                <div class="payment-buttons">
-                    <!-- EN: Stripe -->
-                    <a class="pay-btn usd lang-en" href="https://buy.stripe.com/28EfZj0I88Pk1dRcH9g7e00" target="_blank">
-                        Pay in USD (Stripe)
-                    </a>
-
-                    <!-- PT: Mercado Pago -->
-                    <a class="pay-btn brl lang-pt" style="display:none;" href="https://mpago.li/1mQddEm" target="_blank">
-                        Pagar em Reais (R$)
-                    </a>
+            <div class="process-steps">
+                <!-- PACKAGE 1 ----------------------------------------- -->
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4 class="lang-en">Consultancy services - One-time only</h4>
+                    <h4 class="lang-pt" style="display:none;">Serviço de consultoria - Oferta única</h4>
+                    <h3 class="price lang-en">$1500</h3>
+                    <h3 class="price lang-pt" style="display:none;">R$800</h3>
+                    <p class="lang-en">Includes: content gap, competitor, sales or any other requested analysis with specific data and goals. 30 days data analysis service with insights and recommendations. 2-hour Zoom session.</p>
+                    <p class="lang-pt" style="display:none;">Inclui: análise de conteúdo, competidores, vendas ou outra solicitada; 30 dias de serviço de análise de dados; sessão Zoom de 2 horas.</p>
+                    <div class="payment-buttons">
+                        <a class="pay-btn usd lang-en" href="https://buy.stripe.com/28EfZj0I88Pk1dRcH9g7e00" target="_blank">Pay in USD (Stripe)</a>
+                        <a class="pay-btn brl lang-pt" style="display:none;" href="https://mpago.li/1mQddEm" target="_blank">Pagar em Reais (R$)</a>
+                    </div>
                 </div>
-            </div> <!-- END PACKAGE 1 -->
-
-            <!-- PACKAGE 2 ----------------------------------------- -->
-            <div class="process-step">
-                <div class="step-number">2</div>
-
-                <h4 class="lang-en">Monthly package - Basic</h4>
-                <h4 class="lang-pt" style="display:none;">Pacote Mensal - Básico</h4>
-
-                <h3 class="price lang-en">$350</h3>
-                <h3 class="price lang-pt" style="display:none;">R$200</h3>
-
-                <p class="lang-en">Weekly competitor, sales or any requested analysis. Biweekly insights. Simple monthly report.</p>
-                <p class="lang-pt" style="display:none;">Análise semanal, insights quinzenais, relatório mensal simples.</p>
-
-                <!-- PAYMENT BUTTONS -->
-                <div class="payment-buttons">
-                    <a class="pay-btn usd lang-en" href="https://buy.stripe.com/5kQdRb62sd5A1dR7mPg7e01" target="_blank">
-                        Pay in USD (Stripe)
-                    </a>
-
-                    <a class="pay-btn brl lang-pt" style="display:none;" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=ad2a3f094a774445ad8ae2f03c682ca6" target="_blank">
-                        Pagar em Reais (R$)
-                    </a>
+                <!-- PACKAGE 2 ----------------------------------------- -->
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4 class="lang-en">Monthly package - Basic</h4>
+                    <h4 class="lang-pt" style="display:none;">Pacote Mensal - Básico</h4>
+                    <h3 class="price lang-en">$350</h3>
+                    <h3 class="price lang-pt" style="display:none;">R$200</h3>
+                    <p class="lang-en">Weekly competitor, sales or any requested analysis. Biweekly insights. Simple monthly report.</p>
+                    <p class="lang-pt" style="display:none;">Análise semanal, insights quinzenais, relatório mensal simples.</p>
+                    <div class="payment-buttons">
+                        <a class="pay-btn usd lang-en" href="https://buy.stripe.com/5kQdRb62sd5A1dR7mPg7e01" target="_blank">Pay in USD (Stripe)</a>
+                        <a class="pay-btn brl lang-pt" style="display:none;" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=ad2a3f094a774445ad8ae2f03c682ca6" target="_blank">Pagar em Reais (R$)</a>
+                    </div>
                 </div>
-            </div> <!-- END PACKAGE 2 -->
-
-            <!-- PACKAGE 3 ----------------------------------------- -->
-            <div class="process-step">
-                <div class="step-number">3</div>
-
-                <h4 class="lang-en">Monthly package - Professional</h4>
-                <h4 class="lang-pt" style="display:none;">Pacote Mensal - Profissional</h4>
-
-                <h3 class="price lang-en">$500</h3>
-                <h3 class="price lang-pt" style="display:none;">R$350</h3>
-
-                <p class="lang-en">Weekly analysis, weekly insights, monthly Zoom, detailed report, dashboard access.</p>
-                <p class="lang-pt" style="display:none;">Análise semanal, insights semanais, chamada mensal, relatório detalhado, dashboard.</p>
-
-                <!-- PAYMENT BUTTONS -->
-                <div class="payment-buttons">
-                    <a class="pay-btn usd lang-en" href="https://buy.stripe.com/4gMcN74Yo7Lg4q3cH9g7e02" target="_blank">
-                        Pay in USD (Stripe)
-                    </a>
-
-                    <a class="pay-btn brl lang-pt" style="display:none;" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=4aaa72775388485798fd4941b84fafa7" target="_blank">
-                        Pagar em Reais (R$)
-                    </a>
+                <!-- PACKAGE 3 ----------------------------------------- -->
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4 class="lang-en">Monthly package - Professional</h4>
+                    <h4 class="lang-pt" style="display:none;">Pacote Mensal - Profissional</h4>
+                    <h3 class="price lang-en">$500</h3>
+                    <h3 class="price lang-pt" style="display:none;">R$350</h3>
+                    <p class="lang-en">Weekly analysis, weekly insights, monthly Zoom, detailed report, dashboard access.</p>
+                    <p class="lang-pt" style="display:none;">Análise semanal, insights semanais, chamada mensal, relatório detalhado, dashboard.</p>
+                    <div class="payment-buttons">
+                        <a class="pay-btn usd lang-en" href="https://buy.stripe.com/4gMcN74Yo7Lg4q3cH9g7e02" target="_blank">Pay in USD (Stripe)</a>
+                        <a class="pay-btn brl lang-pt" style="display:none;" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=4aaa72775388485798fd4941b84fafa7" target="_blank">Pagar em Reais (R$)</a>
+                    </div>
                 </div>
-            </div> <!-- END PACKAGE 3 -->
-
-            <!-- PACKAGE 4 ----------------------------------------- -->
-            <div class="process-step">
-                <div class="step-number">4</div>
-
-                <h4 class="lang-en">Monthly package - Premium</h4>
-                <h4 class="lang-pt" style="display:none;">Pacote Mensal - Premium</h4>
-
-                <h3 class="price lang-en">$1000</h3>
-                <h3 class="price lang-pt" style="display:none;">R$500</h3>
-
-                <p class="lang-en">Everything from Pro + one extra business analysis + priority support + 2 monthly calls.</p>
-                <p class="lang-pt" style="display:none;">Tudo do Pro + análise adicional + suporte prioritário + 2 chamadas/mês.</p>
-
-                <!-- PAYMENT BUTTONS -->
-                <div class="payment-buttons">
-                    <a class="pay-btn usd lang-en" href="https://buy.stripe.com/bJe7sN76w4z44q30Yrg7e03" target="_blank">
-                        Pay in USD (Stripe)
-                    </a>
-
-                    <a class="pay-btn brl lang-pt" style="display:none;" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=0dc0381d80ba4089a67b6edc7975424d" target="_blank">
-                        Pagar em Reais (R$)
-                    </a>
+                <!-- PACKAGE 4 ----------------------------------------- -->
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4 class="lang-en">Monthly package - Premium</h4>
+                    <h4 class="lang-pt" style="display:none;">Pacote Mensal - Premium</h4>
+                    <h3 class="price lang-en">$1000</h3>
+                    <h3 class="price lang-pt" style="display:none;">R$500</h3>
+                    <p class="lang-en">Everything from Pro + one extra business analysis + priority support + 2 monthly calls.</p>
+                    <p class="lang-pt" style="display:none;">Tudo do Pro + análise adicional + suporte prioritário + 2 chamadas/mês.</p>
+                    <div class="payment-buttons">
+                        <a class="pay-btn usd lang-en" href="https://buy.stripe.com/bJe7sN76w4z44q30Yrg7e03" target="_blank">Pay in USD (Stripe)</a>
+                        <a class="pay-btn brl lang-pt" style="display:none;" href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=0dc0381d80ba4089a67b6edc7975424d" target="_blank">Pagar em Reais (R$)</a>
+                    </div>
                 </div>
-            </div> <!-- END PACKAGE 4 -->
-
-        </div> <!-- END process-steps -->
-    </div> <!-- END container -->
-</section>
-
-
-<!-- CONTACT SECTION (Calendly) -->
-<section id="contact" class="contact-section" style="padding: 80px 0; background: #f8f9fa;">
-    <div class="container">
-        <h2 class="section-title lang-en">Book Your Free 30-Minute Consultation</h2>
-        <h2 class="section-title lang-pt" style="display: none;">Agende Sua Consultoria Gratuita de 30 Minutos</h2>
-
-        <p class="lang-en" style="text-align:center; max-width:700px; margin:20px auto; color:#555;">
-            Choose a time that works for you. You'll receive the meeting link and confirmation instantly.
-        </p>
-        <p class="lang-pt" style="display:none; text-align:center; max-width:700px; margin:20px auto; color:#555;">
-            Escolha um horário que funcione para você. Você receberá o link da reunião e a confirmação imediatamente.
-        </p>
-
-        <div style="
-            max-width: 900px;
-            margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        ">
-            <!-- Calendly inline widget begin -->
-            <div
-                class="calendly-inline-widget"
-                data-url="https://calendly.com/rod19-silva/30min"
-                style="min-width: 320px; height: 700px;">
-            </div>
-            <!-- Calendly inline widget end -->
-        </div>
-    </div>
-</section>
-
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
-
-<!-- SIMPLE 4-STEP PROCESS (texto RESTAURADO) -->
-<section id="process-steps-2" class="process-section">
-    <div class="container">
-        <h2 class="section-title lang-en">Simple 4-Step Process</h2>
-        <h2 class="section-title lang-pt" style="display: none;">Processo Simples de 4 Passos</h2>
-
-        <p class="section-subtitle lang-en">From problem to solution in weeks, not months. I deliver actionable insights, not just reports.</p>
-        <p class="section-subtitle lang-pt" style="display: none;">Do problema à solução em semanas, não meses. Eu entrego insights acionáveis, não apenas relatórios.</p>
-
-        <div class="process-steps">
-            <div class="process-step">
-                <div class="step-number">1</div>
-                <h4 class="lang-en">Discovery & Analysis</h4>
-                <h4 class="lang-pt" style="display: none;">Descoberta & Análise</h4>
-                <p class="lang-en">I analyze your business challenges and data to identify key opportunities.</p>
-                <p class="lang-pt" style="display: none;">Eu analiso seus desafios de negócios e dados para identificar oportunidades-chave.</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">2</div>
-                <h4 class="lang-en">Solution Design</h4>
-                <h4 class="lang-pt" style="display: none;">Design da Solução</h4>
-                <p class="lang-en">I create a customized data strategy tailored to your specific needs (which naturally varies across time).</p>
-                <p class="lang-pt" style="display: none;">Eu crio uma estratégia de dados personalizada adaptada às suas necessidades específicas (o que naturalmente varia ao longo do tempo).</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">3</div>
-                <h4 class="lang-en">Systems Thinking Approach</h4>
-                <h4 class="lang-pt" style="display: none;">Abordagem de pensamento sistêmico</h4>
-                <p class="lang-en">After initial analysis and results, I give a zoom out in the lens to have a broader view of the system that fuels your business. By doing so new relationships are found, giving you several advantages against your competitors.</p>
-                <p class="lang-pt" style="display: none;">Depois das análises e resultados iniciais, eu dou um zoom out nas lentes para ter uma visão mais ampla do sistema que alimenta o seu negócio. Ao fazer isso novas relações são descobertas, te dando várias vantagens em relação aos seus competidores.</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">4</div>
-                <h4 class="lang-en">Results & Optimization</h4>
-                <h4 class="lang-pt" style="display: none;">Resultados & Otimização</h4>
-                <p class="lang-en">I monitor results and optimize for continuous improvement and maximum profit and growth.</p>
-                <p class="lang-pt" style="display: none;">Eu monitoro resultados e otimizo para melhoria contínua, lucro e crescimento máximo.</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-
-<!-- FOOTER style fix to put Data Solutions below Get in Touch -->
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-logo">Data<span>Solutions</span></div>
-
-            <div class="social-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-medium"></i></a>
+    <!-- CONTACT SECTION (Calendly) -->
+    <section id="contact" class="contact-section" style="padding: 80px 0; background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title lang-en">Book Your Free 30-Minute Consultation</h2>
+            <h2 class="section-title lang-pt" style="display: none;">Agende Sua Consultoria Gratuita de 30 Minutos</h2>
+            <p class="lang-en" style="text-align:center; max-width:700px; margin:20px auto; color:#555;">Choose a time that works for you. You'll receive the meeting link and confirmation instantly.</p>
+            <p class="lang-pt" style="display:none; text-align:center; max-width:700px; margin:20px auto; color:#555;">Escolha um horário que funcione para você. Você receberá o link da reunião e a confirmação imediatamente.</p>
+            <div style="max-width: 900px; margin: 40px auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <div class="calendly-inline-widget" data-url="https://calendly.com/rod19-silva/30min" style="min-width: 320px; height: 700px;"></div>
             </div>
         </div>
+    </section>
 
-        <div class="copyright">
-            <p class="lang-en">&copy; 2023 Data Solutions. All rights reserved.</p>
-            <p class="lang-pt" style="display: none;">&copy; 2023 Data Solutions. Todos os direitos reservados.</p>
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <!-- SIMPLE 4-STEP PROCESS -->
+    <section id="process-steps-2" class="process-section">
+        <div class="container">
+            <h2 class="section-title lang-en">Simple 4-Step Process</h2>
+            <h2 class="section-title lang-pt" style="display: none;">Processo Simples de 4 Passos</h2>
+            <p class="section-subtitle lang-en">From problem to solution in weeks, not months. I deliver actionable insights, not just reports.</p>
+            <p class="section-subtitle lang-pt" style="display: none;">Do problema à solução em semanas, não meses. Eu entrego insights acionáveis, não apenas relatórios.</p>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4 class="lang-en">Discovery & Analysis</h4>
+                    <h4 class="lang-pt" style="display: none;">Descoberta & Análise</h4>
+                    <p class="lang-en">I analyze your business challenges and data to identify key opportunities.</p>
+                    <p class="lang-pt" style="display: none;">Eu analiso seus desafios de negócios e dados para identificar oportunidades-chave.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4 class="lang-en">Solution Design</h4>
+                    <h4 class="lang-pt" style="display: none;">Design da Solução</h4>
+                    <p class="lang-en">I create a customized data strategy tailored to your specific needs (which naturally varies across time).</p>
+                    <p class="lang-pt" style="display: none;">Eu crio uma estratégia de dados personalizada adaptada às suas necessidades específicas (o que naturalmente varia ao longo do tempo).</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4 class="lang-en">Systems Thinking Approach</h4>
+                    <h4 class="lang-pt" style="display: none;">Abordagem de pensamento sistêmico</h4>
+                    <p class="lang-en">After initial analysis and results, I give a zoom out in the lens to have a broader view of the system that fuels your business. By doing so new relationships are found, giving you several advantages against your competitors.</p>
+                    <p class="lang-pt" style="display: none;">Depois das análises e resultados iniciais, eu dou um zoom out nas lentes para ter uma visão mais ampla do sistema que alimenta o seu negócio. Ao fazer isso novas relações são descobertas, te dando várias vantagens em relação aos seus competidores.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4 class="lang-en">Results & Optimization</h4>
+                    <h4 class="lang-pt" style="display: none;">Resultados & Otimização</h4>
+                    <p class="lang-en">I monitor results and optimize for continuous improvement and maximum profit and growth.</p>
+                    <p class="lang-pt" style="display: none;">Eu monitoro resultados e otimizo para melhoria contínua, lucro e crescimento máximo.</p>
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
+    </section>
 
-<!-- LANGUAGE TOGGLE & minor behaviors (RESTORED & ADJUSTED) -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const enBtn = document.getElementById('en-btn');
-    const ptBtn = document.getElementById('pt-btn');
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Data<span>Solutions</span></div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-medium"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p class="lang-en">&copy; 2023 Data Solutions. All rights reserved.</p>
+                <p class="lang-pt" style="display: none;">&copy; 2023 Data Solutions. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
-    // Show English content by default
-    function showLanguage(lang) {
-        // Hide all language-specific elements
-        const allElements = document.querySelectorAll('.lang-en, .lang-pt');
-        allElements.forEach(el => el.style.display = 'none');
+    <!-- LANGUAGE TOGGLE & minor behaviors -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const enBtn = document.getElementById('en-btn');
+        const ptBtn = document.getElementById('pt-btn');
 
-        // Show elements for selected language
-        const langElements = document.querySelectorAll('.lang-' + lang);
-        langElements.forEach(el => {
-            // if element is an option inside select, don't change display for select itself
-            el.style.display = (el.tagName.toLowerCase() === 'option') ? '' : 'block';
-        });
+        function showLanguage(lang) {
+            const allElements = document.querySelectorAll('.lang-en, .lang-pt');
+            allElements.forEach(el => el.style.display = 'none');
 
-        // Handle select options specifically (if select exists)
-        const serviceSelect = document.getElementById('service');
-        if (serviceSelect) {
-            const options = serviceSelect.querySelectorAll('option');
-            options.forEach(option => {
-                if (option.classList.contains('lang-' + lang)) {
-                    option.style.display = '';
-                } else {
-                    option.style.display = 'none';
-                }
+            const langElements = document.querySelectorAll('.lang-' + lang);
+            langElements.forEach(el => {
+                el.style.display = (el.tagName.toLowerCase() === 'option') ? '' : 'block';
             });
-            // pick first visible option if none selected
-            const visibleOptions = Array.from(options).filter(opt => opt.style.display !== 'none' && opt.value !== '');
-            if (visibleOptions.length > 0) {
-                serviceSelect.value = visibleOptions[0].value;
+
+            const serviceSelect = document.getElementById('service');
+            if (serviceSelect) {
+                const options = serviceSelect.querySelectorAll('option');
+                options.forEach(option => {
+                    if (option.classList.contains('lang-' + lang)) {
+                        option.style.display = '';
+                    } else {
+                        option.style.display = 'none';
+                    }
+                });
+                const visibleOptions = Array.from(options).filter(opt => opt.style.display !== 'none' && opt.value !== '');
+                if (visibleOptions.length > 0) {
+                    serviceSelect.value = visibleOptions[0].value;
+                }
             }
         }
-    }
 
-    function setActiveButton(activeBtn, inactiveBtn) {
-        activeBtn.classList.add('active');
-        inactiveBtn.classList.remove('active');
-    }
+        function setActiveButton(activeBtn, inactiveBtn) {
+            activeBtn.classList.add('active');
+            inactiveBtn.classList.remove('active');
+        }
 
-    // initial
-    showLanguage('en');
-    setActiveButton(enBtn, ptBtn);
-
-    enBtn.addEventListener('click', function() {
         showLanguage('en');
         setActiveButton(enBtn, ptBtn);
+
+        enBtn.addEventListener('click', function() {
+            showLanguage('en');
+            setActiveButton(enBtn, ptBtn);
+        });
+
+        ptBtn.addEventListener('click', function() {
+            showLanguage('pt');
+            setActiveButton(ptBtn, enBtn);
+        });
+
+        enBtn.addEventListener('keyup', (e) => { if(e.key === 'Enter') enBtn.click(); });
+        ptBtn.addEventListener('keyup', (e) => { if(e.key === 'Enter') ptBtn.click(); });
     });
-
-    ptBtn.addEventListener('click', function() {
-        showLanguage('pt');
-        setActiveButton(ptBtn, enBtn);
-    });
-
-    // Accessibility: keyboard toggles
-    enBtn.addEventListener('keyup', (e) => { if(e.key === 'Enter') enBtn.click(); });
-    ptBtn.addEventListener('keyup', (e) => { if(e.key === 'Enter') ptBtn.click(); });
-});
-</script>
-
+    </script>
 </body>
 </html>
-
