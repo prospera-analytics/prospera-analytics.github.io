@@ -100,35 +100,37 @@
             height: 4px;
             background-color: var(--secondary-color);
         }
+        
         /* LOGO BAR - NOVA SEÇÃO */
         .logo-bar {
-    background-color: white;
-    width: 100%;
-    padding: 15px 0; /* Ajuste este valor para mudar altura da seção */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    position: relative;
-    z-index: 1001;
-}
+            background-color: white;
+            width: 100%;
+            padding: 15px 0; /* Ajuste este valor para mudar altura da seção */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: relative;
+            z-index: 1001;
+            margin-bottom: 0; /* Garante que não haja espaçamento extra */
+        }
 
         .logo-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-}
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+        }
 
         .logo {
-    height: 40px; /* Altura do logo */
-    width: auto;
-    max-width: 180px;
-    transition: opacity 0.3s ease;
-}
+            height: 40px; /* Altura do logo */
+            width: auto;
+            max-width: 180px;
+            transition: opacity 0.3s ease;
+        }
 
         .logo:hover {
-    opacity: 0.8;
-}
+            opacity: 0.8;
+        }
         
         /* Header & Navigation */
         header {
@@ -180,7 +182,7 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            z-index: 1000;
+            z-index: 1002; /* Aumentado para ficar acima do logo bar */
             background-color: white;
             border-radius: 30px;
             padding: 5px;
@@ -414,15 +416,16 @@
             .header-content h1 {
                 font-size: 2rem;
             }
+            
             /* Ajustes para mobile no logo bar */
-.logo-bar {
-    padding: 12px 0;
-}
+            .logo-bar {
+                padding: 12px 0;
+            }
 
-.logo {
-    height: 35px;
-    max-width: 150px;
-}
+            .logo {
+                height: 35px;
+                max-width: 150px;
+            }
             
             .header-content p {
                 font-size: 1.1rem;
@@ -472,18 +475,18 @@
         }
         
         @media (max-width: 480px) {
-            .project-header, .project-content, .logo {
-    height: 30px; max-width: 130px; {
+            .project-header, .project-content {
                 padding: 25px 20px;
             }
+            
             .logo {
-    height: 30px;
-    max-width: 130px;
-}
+                height: 30px;
+                max-width: 130px;
+            }
 
-.logo-bar {
-    padding: 10px 0;
-}
+            .logo-bar {
+                padding: 10px 0;
+            }
             
             .project-header h2 {
                 font-size: 1.5rem;
@@ -501,13 +504,14 @@
 </head>
 <body>
     <!-- NOVA SEÇÃO: LOGO BAR -->
-<div class="logo-bar">
-    <div class="logo-container">
-        <a href="#">
-            <img src="../assets/images/prospera-main-logo.png" alt="Prospera Analytics Logo" class="logo">
-        </a>
+    <div class="logo-bar">
+        <div class="logo-container">
+            <a href="#">
+                <img src="../assets/images/prospera-main-logo.png" alt="Prospera Analytics Logo" class="logo">
+            </a>
+        </div>
     </div>
-</div>
+    
     <!-- Language Toggle -->
     <div class="language-toggle">
         <button class="language-btn active" id="en-btn">English</button>
@@ -666,8 +670,8 @@
                             <p class="lang-en">This project involves understanding delivery routes, which routes are: most important, similar to each other, problematic (lots of late deliveries), provide the best cost-benefit.</p>
                             <p class="lang-en">By understanding these factors, you will be able to make a more lucid decision about which changes to make in order to increase deliveries on time, and thus customer satisfaction, and also which routes could be replaced by others that have a better cost-benefit.</p>
                             
-                            <p class="lang-pt" style="display: none;">Este projeto envolve entender rotas de entrega e identificar quais rotas são: mais importantes, semelhantes entre si, problemáticas (com muitas entregas atrasadas) e quais oferecem o melhor custo-benefício.</p>
-                            <p class="lang-pt" style="display: none;">Ao entender esses fatores, você poderá tomar decisões mais embasadas sobre quais mudanças implementar para aumentar as entregas no prazo — e, consequentemente, a satisfação dos clientes — além de identificar quais rotas podem ser substituídas por outras que ofereçam melhor custo-benefício.</p>
+                            <p class="lang-pt" style="display: none;">Este projeto envolve a criação de um dashboard que oferece uma visão abrangente dos clientes e dos produtos que eles compram, considerando informações de tempo e localização geográfica.</p>
+                            <p class="lang-pt" style="display: none;">Ao analisar simultaneamente diferentes fatores que afetam as vendas, você poderá tomar decisões mais assertivas na hora de anunciar produtos, oferecer descontos e gerenciar o estoque. Tudo isso para evitar gastos desnecessários e maximizar as vendas.</p>
                         </div>
                         
                         <div class="project-features">
@@ -835,9 +839,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-                 <!-- Project 4 -->
+                <!-- Project 4 -->
                 <div class="project-item">
                     <div class="project-header">
                         <div class="project-number">4</div>
@@ -936,7 +939,8 @@
                         </div>
                     </div>
                 </div>
-            
+            </div>
+
             <!-- Back to Portfolio Button -->
             <div style="text-align: center; margin-top: 60px;">
                 <a href="https://prospera-analytics.github.io/" class="btn-outline lang-en">
