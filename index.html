@@ -152,25 +152,19 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
-/* White background container for logo */
-.logo-white-bg {
+/* White section for logo at the top */
+.logo-top-section {
     background-color: white;
-    padding: 30px 50px;
-    display: inline-block;
-    border-radius: 10px;
-    margin-bottom: 25px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 40px 0;
     text-align: center;
+    width: 100%;
 }
 
-/* Enlarge the logo inside the white container */
-.logo-white-bg .profile-img {
-    width: 280px; /* Makes logo much larger */
-    height: auto; /* Keeps proportions */
-    border-radius: 0; /* Removes circular crop - shows full logo */
-    border: none; /* Removes the white border */
-    margin-bottom: 0; /* Removes extra space */
-    box-shadow: none; /* Removes previous shadow */
+.logo-main {
+    width: 320px; /* Adjust this to make logo bigger/smaller */
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
         
         .header-content h1 {
@@ -555,14 +549,14 @@
                 font-size: 1.1rem;
             }
     /* Responsive styles for logo white background */
-    .logo-white-bg {
-        padding: 20px 30px;
-        margin-bottom: 20px;
-    }
-    
-    .logo-white-bg .profile-img {
-        width: 220px; /* Smaller on mobile */
-    }
+    /* Responsive styles for top logo section */
+.logo-top-section {
+    padding: 30px 0;
+}
+
+.logo-main {
+    width: 250px; /* Smaller on mobile */
+}
             .about-content {
                 flex-direction: column;
             }
@@ -609,21 +603,25 @@
         <button class="language-btn" id="pt-btn">Português</button>
     </div>
 
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <!-- ADD THIS DIV AROUND THE LOGO ONLY -->
-            <div class="logo-white-bg">
-                <img src="./assets/images/prospera-logo-symbol.png" alt="Prospera Logo" class="profile-img">
-            </div>
-            <div class="header-content">
-                <h1 class="lang-en">Prospera</h1>
-                <h1 class="lang-pt" style="display: none;">Prospera</h1>
-                <p class="lang-en">Where your business grows!</p>
-                <p class="lang-pt" style="display: none;">Onde o seu negócio evolui!</p>
-            </div>
+    
+    <!-- White Logo Section -->
+<div class="logo-top-section">
+    <div class="container">
+        <img src="./assets/images/prospera-logo-symbol.png" alt="Prospera Logo" class="logo-main">
+    </div>
+</div>
+
+<!-- Header Section -->
+<header>
+    <div class="container">
+        <div class="header-content">
+            <h1 class="lang-en">Prospera</h1>
+            <h1 class="lang-pt" style="display: none;">Prospera</h1>
+            <p class="lang-en">Where your business grows!</p>
+            <p class="lang-pt" style="display: none;">Onde o seu negócio evolui!</p>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- Skills & Projects Side-by-Side Section -->
     <section id="skills-projects">
@@ -1326,6 +1324,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
     </script>
 </body>
 </html>
+
 
 
 
